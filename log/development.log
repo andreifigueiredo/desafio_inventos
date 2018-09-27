@@ -1004,3 +1004,59 @@ Processing by ReservasController#index as HTML
 Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 18:00:45 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (6.6ms)
+Completed 200 OK in 193ms (Views: 153.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 18:00:47 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (6.4ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 18:00:47 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 18:00:47 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 18:01:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (13.9ms)
+Completed 200 OK in 268ms (Views: 261.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 18:02:00 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (10.4ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
