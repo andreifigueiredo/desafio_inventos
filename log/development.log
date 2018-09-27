@@ -1060,3 +1060,469 @@ Processing by ReservasController#index as HTML
 Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to AddPrecoTotalToUsers (20180927221145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "preco_total" decimal[0m
+  ↳ db/migrate/20180927221145_add_preco_total_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (26.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180927221145"]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (99.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:12:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (14.8ms)
+Completed 200 OK in 241ms (Views: 233.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:12:09 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.4ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:12:13 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.1ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:12:14 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.9ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:12:16 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to AddPrecoTotalToUsers (20180927221145)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime DEFAULT NULL, "last_sign_in_at" datetime DEFAULT NULL, "current_sign_in_ip" varchar DEFAULT NULL, "last_sign_in_ip" varchar DEFAULT NULL, "confirmation_token" varchar DEFAULT NULL, "confirmed_at" datetime DEFAULT NULL, "confirmation_sent_at" datetime DEFAULT NULL, "unconfirmed_email" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "preco_total" decimal DEFAULT NULL)[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (11.2ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","confirmation_token","confirmed_at","confirmation_sent_at","unconfirmed_email","created_at","updated_at","preco_total")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","confirmation_token","confirmed_at","confirmation_sent_at","unconfirmed_email","created_at","updated_at","preco_total" FROM "users"[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime DEFAULT NULL, "last_sign_in_at" datetime DEFAULT NULL, "current_sign_in_ip" varchar DEFAULT NULL, "last_sign_in_ip" varchar DEFAULT NULL, "confirmation_token" varchar DEFAULT NULL, "confirmed_at" datetime DEFAULT NULL, "confirmation_sent_at" datetime DEFAULT NULL, "unconfirmed_email" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","confirmation_token","confirmed_at","confirmation_sent_at","unconfirmed_email","created_at","updated_at")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","confirmation_token","confirmed_at","confirmation_sent_at","unconfirmed_email","created_at","updated_at" FROM "ausers"[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180927221145"]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (66.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to AddPrecoTotalToReservas (20180927221349)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "reservas" ADD "preco_total" decimal[0m
+  ↳ db/migrate/20180927221349_add_preco_total_to_reservas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180927221349"]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (106.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:14:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (16.1ms)
+Completed 200 OK in 214ms (Views: 204.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:14:38 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.9ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:14:40 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:14:41 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:12
+  Rendered reservas/index.html.slim within layouts/application (11.3ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas/new" for 127.0.0.1 at 2018-09-27 19:14:43 -0300
+Processing by ReservasController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:17
+  Rendering reservas/new.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (172.4ms)
+  Rendered reservas/new.html.slim within layouts/application (180.4ms)
+Completed 200 OK in 358ms (Views: 222.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:16:44 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (7.1ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:16:45 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:16:46 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:16:47 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (15.5ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:17:36 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (15.0ms)
+Completed 200 OK in 59ms (Views: 48.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:17:37 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (12.4ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas/1/edit" for 127.0.0.1 at 2018-09-27 19:17:41 -0300
+Processing by ReservasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.7ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/edit.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (13.6ms)
+  Rendered reservas/edit.html.slim within layouts/application (19.9ms)
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reservas/1/edit" for 127.0.0.1 at 2018-09-27 19:20:04 -0300
+Processing by ReservasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/edit.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (150.3ms)
+  Rendered reservas/edit.html.slim within layouts/application (153.5ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_box' for #<ActionView::Helpers::FormBuilder:0x00007f087de636d8>
+Did you mean?  text_area):
+    10:     = f.label :data_da_reserva
+    11:     = f.date_select :data_da_reserva
+    12:     = f.label :preco_total
+    13:     = f.text_box :preco_total
+    14:   .actions = f.submit
+  
+app/views/reservas/_form.html.slim:13:in `block in _app_views_reservas__form_html_slim__4536218891019078340_69837224546280'
+app/views/reservas/_form.html.slim:1:in `_app_views_reservas__form_html_slim__4536218891019078340_69837224546280'
+app/views/reservas/edit.html.slim:3:in `_app_views_reservas_edit_html_slim__1733217279042762408_69837428434180'
+Started GET "/reservas/1/edit" for 127.0.0.1 at 2018-09-27 19:20:38 -0300
+Processing by ReservasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/edit.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (55.5ms)
+  Rendered reservas/edit.html.slim within layouts/application (64.0ms)
+Completed 200 OK in 126ms (Views: 122.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/reservas/1" for 127.0.0.1 at 2018-09-27 19:21:31 -0300
+Processing by ReservasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KlFs0CzCnHfilkwRRF4YvpsYbKMtQf/3OSHstA+vSb9jsqafLYexekL+gbSVxWBsSLpHBNCdX1WyM1lZ8MBuXA==", "reserva"=>{"data_da_reserva(1i)"=>"2018", "data_da_reserva(2i)"=>"10", "data_da_reserva(3i)"=>"27", "preco_total"=>"4"}, "commit"=>"Update Reserva", "id"=>"1"}
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+Unpermitted parameter: :preco_total
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:44
+Redirected to http://localhost:3000/reservas/1
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/reservas/1" for 127.0.0.1 at 2018-09-27 19:21:31 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/show.html.slim within layouts/application
+  Rendered reservas/show.html.slim within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:21:34 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (8.9ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:21:40 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas/1/edit" for 127.0.0.1 at 2018-09-27 19:21:41 -0300
+Processing by ReservasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/edit.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (10.9ms)
+  Rendered reservas/edit.html.slim within layouts/application (18.1ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/reservas/1" for 127.0.0.1 at 2018-09-27 19:21:47 -0300
+Processing by ReservasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GShOZnkNLS7kSEs3oQUPGZ0XZ7JadHxHhd1i2dqkVpIcO4gP5ElIoS1Mnas4QqvXtvMhDjhxlrF85mpnL1nMMg==", "reserva"=>{"data_da_reserva(1i)"=>"2018", "data_da_reserva(2i)"=>"10", "data_da_reserva(3i)"=>"27", "preco_total"=>"7"}, "commit"=>"Update Reserva", "id"=>"1"}
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+Unpermitted parameter: :preco_total
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:44
+Redirected to http://localhost:3000/reservas/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas/1" for 127.0.0.1 at 2018-09-27 19:21:47 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/show.html.slim within layouts/application
+  Rendered reservas/show.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:21:51 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (10.2ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas/1" for 127.0.0.1 at 2018-09-27 19:21:58 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/show.html.slim within layouts/application
+  Rendered reservas/show.html.slim within layouts/application (7.8ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:22:01 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (14.5ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:22:36 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (20.2ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas/1" for 127.0.0.1 at 2018-09-27 19:22:38 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/show.html.slim within layouts/application
+  Rendered reservas/show.html.slim within layouts/application (4.9ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:22:43 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (11.9ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:24:49 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (8.5ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reservas/1/edit" for 127.0.0.1 at 2018-09-27 19:24:52 -0300
+Processing by ReservasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/edit.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (10.4ms)
+  Rendered reservas/edit.html.slim within layouts/application (14.9ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/reservas/1" for 127.0.0.1 at 2018-09-27 19:24:57 -0300
+Processing by ReservasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZ2kTHWvp8xdd3Upr+DxSG8WZaETix8g25RJIIaSLUGsjmIl6OvCQ5Rzo7U2p1WGRPIjHXGO9dYir0Gec2+34Q==", "reserva"=>{"data_da_reserva(1i)"=>"2018", "data_da_reserva(2i)"=>"10", "data_da_reserva(3i)"=>"27", "preco_total"=>"4"}, "commit"=>"Update Reserva", "id"=>"1"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[36mReserva Update (1.2ms)[0m  [1m[33mUPDATE "reservas" SET "preco_total" = ?, "updated_at" = ? WHERE "reservas"."id" = ?[0m  [["preco_total", 4.0], ["updated_at", "2018-09-27 22:24:57.083290"], ["id", 1]]
+  ↳ app/controllers/reservas_controller.rb:44
+  [1m[35m (70.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:44
+Redirected to http://localhost:3000/reservas/1
+Completed 302 Found in 111ms (ActiveRecord: 73.9ms)
+
+
+Started GET "/reservas/1" for 127.0.0.1 at 2018-09-27 19:24:57 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:67
+  Rendering reservas/show.html.slim within layouts/application
+  Rendered reservas/show.html.slim within layouts/application (8.7ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 19:24:59 -0300
+Processing by ReservasController#index as HTML
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.5ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (12.7ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+

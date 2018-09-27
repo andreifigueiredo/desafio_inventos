@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_202034) do
+ActiveRecord::Schema.define(version: 2018_09_27_221349) do
 
   create_table "reservas", force: :cascade do |t|
     t.date "data_da_reserva"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.decimal "preco_total"
   end
 
   create_table "users", force: :cascade do |t|
