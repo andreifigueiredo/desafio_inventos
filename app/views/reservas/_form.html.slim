@@ -1,0 +1,12 @@
+= form_for @reserva do |f|
+  - if @reserva.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@reserva.errors.count, "error")} prohibited this reserva from being saved:"
+      ul
+        - @reserva.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :data_da_reserva
+    = f.date_select :data_da_reserva
+  .actions = f.submit
