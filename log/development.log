@@ -1740,3 +1740,392 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 1.7ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-09-27 22:29:11 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (355.2ms)
+Completed 200 OK in 3581ms (Views: 3406.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-27 22:29:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4322.7ms)
+Completed 200 OK in 5037ms (Views: 4791.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-27 22:30:02 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgLVz+sEa3Mn9tW9xsy/rhwEdwHMp5fjm1KT7r5GYDZKkjTr1l+SBHCxS/Nx4+LC7Qg7fBMQEqYZ00uwhlOQmg==", "user"=>{"email"=>"andreipaesfigueiredo@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (352.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "andreipaesfigueiredo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 2349ms (ActiveRecord: 352.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-27 22:30:05 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (27.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 204ms (Views: 174.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-27 22:30:11 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (16.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (116.6ms)
+Completed 200 OK in 371ms (Views: 159.9ms | ActiveRecord: 17.1ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateMiniaturas (20180928194633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateMiniaturas (20180928194633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180928194633_create_miniaturas.rb:3
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "miniaturas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "tamanho" decimal, "preco" decimal, "descricao" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180928194633_create_miniaturas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180928194633"]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (278.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/reservas" for 127.0.0.1 at 2018-09-28 21:57:38 -0300
+Started GET "/reservas" for 127.0.0.1 at 2018-09-28 21:58:20 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReservasController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-09-28 21:58:38 -0300
+  [1m[36mUser Load (425.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (69.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (4037.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (25.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (708.5ms)
+Completed 200 OK in 98741ms (Views: 87058.5ms | ActiveRecord: 645.6ms)
+
+
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (36.7ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:15
+  Rendered home/index.html.slim within layouts/application (167.9ms)
+  [1m[36mUser Load (69.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 925ms (Views: 608.8ms | ActiveRecord: 108.8ms)
+
+
+Completed 200 OK in 95868ms (Views: 89676.6ms | ActiveRecord: 555.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:01:33 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:15
+  Rendered home/index.html.slim within layouts/application (46.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 915ms (Views: 897.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-09-28 22:01:39 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (11.9ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas"[0m
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (30.3ms)
+Completed 200 OK in 220ms (Views: 66.6ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:01:42 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:15
+  Rendered home/index.html.slim within layouts/application (13.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:06:58 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (78.8ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (86.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 326ms (Views: 245.3ms | ActiveRecord: 79.2ms)
+
+
+Started GET "/miniaturas" for 127.0.0.1 at 2018-09-28 22:12:36 -0300
+Processing by MiniaturasController#index as HTML
+  Rendering miniaturas/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (14.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/miniaturas/index.html.slim:15
+  Rendered miniaturas/index.html.slim within layouts/application (97.8ms)
+  [1m[36mUser Load (96.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 3887ms (Views: 3545.2ms | ActiveRecord: 112.3ms)
+
+
+Started GET "/miniaturas/new" for 127.0.0.1 at 2018-09-28 22:12:45 -0300
+Processing by MiniaturasController#new as HTML
+  Rendering miniaturas/new.html.slim within layouts/application
+  Rendered miniaturas/_form.html.slim (74.0ms)
+  Rendered miniaturas/new.html.slim within layouts/application (79.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 203ms (Views: 136.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/miniaturas" for 127.0.0.1 at 2018-09-28 22:13:33 -0300
+Processing by MiniaturasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AgoqhG/DRyxNbwEeCP0M4+e453iVo8ieNLgQfCrVn50JprtfEzwkJF8QzkzGLhPQp5VzsJDAPrDvz/2JY+FrDw==", "miniatura"=>{"nome"=>"BoredSillyKevin", "tamanho"=>"0,20", "preco"=>"21,00", "descricao"=>"Miniatura do BoredSillyKevin"}, "commit"=>"Create Miniatura"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_controller.rb:30
+  [1m[36mMiniatura Create (100.4ms)[0m  [1m[32mINSERT INTO "miniaturas" ("nome", "tamanho", "preco", "descricao", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "BoredSillyKevin"], ["tamanho", 0.0], ["preco", 21.0], ["descricao", "Miniatura do BoredSillyKevin"], ["created_at", "2018-09-29 01:13:33.508136"], ["updated_at", "2018-09-29 01:13:33.508136"]]
+  ↳ app/controllers/miniaturas_controller.rb:30
+  [1m[35m (322.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/miniaturas_controller.rb:30
+Redirected to http://localhost:3000/miniaturas/1
+Completed 302 Found in 444ms (ActiveRecord: 425.1ms)
+
+
+Started GET "/miniaturas/1" for 127.0.0.1 at 2018-09-28 22:13:34 -0300
+Processing by MiniaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_controller.rb:67
+  Rendering miniaturas/show.html.slim within layouts/application
+  Rendered miniaturas/show.html.slim within layouts/application (6.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 125ms (Views: 69.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:13:38 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (9.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 79ms (Views: 62.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/BoredSillyKevin.jpg" for 127.0.0.1 at 2018-09-28 22:13:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BoredSillyKevin.jpg"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:21:20 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (179.9ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:15: syntax error, unexpected ')'
+...g src="#{miniatura.nome}.jpg"/)))).to_s)); 
+...                              ^
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:15: syntax error, unexpected ';', expecting ')'
+...niatura.nome}.jpg"/)))).to_s)); 
+...                              ^
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:21: syntax error, unexpected keyword_end, expecting ')'
+...cat(("</td></tr>".freeze)); end; @output_buffer.safe_concat(...
+...                            ^~~
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:22: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:24: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/home/index.html.slim:15: syntax error, unexpected ')'
+app/views/home/index.html.slim:15: syntax error, unexpected ';', expecting ')'
+app/views/home/index.html.slim:21: syntax error, unexpected keyword_end, expecting ')'
+app/views/home/index.html.slim:22: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/home/index.html.slim:24: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:22:01 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  Rendered home/index.html.slim within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:15: syntax error, unexpected ')'
+...(img src="miniatura.nome.jpg"/)))).to_s)); 
+...                              ^
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:15: syntax error, unexpected ';', expecting ')'
+...iniatura.nome.jpg"/)))).to_s)); 
+...                              ^
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:21: syntax error, unexpected keyword_end, expecting ')'
+...cat(("</td></tr>".freeze)); end; @output_buffer.safe_concat(...
+...                            ^~~
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:22: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/andrei/Documents/Clones/desafio_inventos/app/views/home/index.html.slim:24: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/home/index.html.slim:15: syntax error, unexpected ')'
+app/views/home/index.html.slim:15: syntax error, unexpected ';', expecting ')'
+app/views/home/index.html.slim:21: syntax error, unexpected keyword_end, expecting ')'
+app/views/home/index.html.slim:22: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/home/index.html.slim:24: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:23:50 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (49.7ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (269.1ms)
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 49.7ms)
+
+
+  
+ActionView::Template::Error (The asset "miniatura.nome.jpg" is not present in the asset pipeline.):
+    12:   tbody
+    13:     - @miniaturas.each do |miniatura|
+    14:       tr
+    15:         td = (image_tag("miniatura.nome.jpg"))
+    16:         td = miniatura.nome
+    17:         td = miniatura.tamanho
+    18:         td = miniatura.preco
+  
+app/views/home/index.html.slim:15:in `block in _app_views_home_index_html_slim__4091245372110920804_69849093748480'
+app/views/home/index.html.slim:13:in `_app_views_home_index_html_slim__4091245372110920804_69849093748480'
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:24:18 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (2713.0ms)
+  [1m[36mUser Load (133.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 3219ms (Views: 3032.8ms | ActiveRecord: 133.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:25:59 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (9.1ms)
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 640ms (Views: 624.3ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:26:14 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (8.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 123ms (Views: 120.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:26:41 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (25.1ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (36.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 81ms (Views: 54.7ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-28 22:26:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (8.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.6ms)
+
+

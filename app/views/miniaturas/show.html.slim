@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @miniatura.nome
+p
+  strong Tamanho:
+  = @miniatura.tamanho
+p
+  strong Preco:
+  = @miniatura.preco
+p
+  strong Descricao:
+  = @miniatura.descricao
+
+=> link_to 'Edit', edit_miniatura_path(@miniatura)
+'|
+=< link_to 'Back', miniaturas_path

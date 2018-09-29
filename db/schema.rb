@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_221349) do
+ActiveRecord::Schema.define(version: 2018_09_28_194633) do
+
+  create_table "miniaturas", force: :cascade do |t|
+    t.string "nome"
+    t.decimal "tamanho"
+    t.decimal "preco"
+    t.string "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "reservas", force: :cascade do |t|
     t.date "data_da_reserva"

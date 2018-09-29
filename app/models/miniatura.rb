@@ -1,0 +1,2 @@
+class Miniatura < ApplicationRecord
+end

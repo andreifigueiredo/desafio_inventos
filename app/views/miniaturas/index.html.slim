@@ -1,0 +1,27 @@
+h1 Listing miniaturas
+
+table
+  thead
+    tr
+      th Nome
+      th Tamanho
+      th Preco
+      th Descricao
+      th
+      th
+      th
+
+  tbody
+    - @miniaturas.each do |miniatura|
+      tr
+        td = miniatura.nome
+        td = miniatura.tamanho
+        td = miniatura.preco
+        td = miniatura.descricao
+        td = link_to 'Show', miniatura
+        td = link_to 'Edit', edit_miniatura_path(miniatura)
+        td = link_to 'Destroy', miniatura, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Miniatura', new_miniatura_path

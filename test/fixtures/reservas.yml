@@ -2,6 +2,10 @@
 
 one:
   data_da_reserva: 2018-09-27
+  preco_total: 5
+  user_id: 1
 
 two:
   data_da_reserva: 2018-09-27
+  preco_total: 10
+  user_id: 1

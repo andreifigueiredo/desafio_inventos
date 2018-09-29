@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ReservasControllerTest < ActionDispatch::IntegrationTest
+  include Devise::TestHelpers
+
   setup do
     @reserva = reservas(:one)
   end

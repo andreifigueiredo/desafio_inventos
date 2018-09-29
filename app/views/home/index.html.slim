@@ -1,2 +1,20 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+h1 Listing miniaturas
+
+table
+  thead
+    tr
+      th Imagem
+      th Nome
+      th Tamanho
+      th Preco
+      th Descricao
+      th
+  tbody
+    - @miniaturas.each do |miniatura|
+      tr
+        td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
+        td = miniatura.nome
+        td = miniatura.tamanho
+        td = miniatura.preco
+        td = miniatura.descricao
+        td = link_to 'Show', miniatura

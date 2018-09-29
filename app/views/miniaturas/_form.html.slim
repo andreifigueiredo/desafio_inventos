@@ -1,0 +1,21 @@
+= form_for @miniatura do |f|
+  - if @miniatura.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@miniatura.errors.count, "error")} prohibited this miniatura from being saved:"
+      ul
+        - @miniatura.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :tamanho
+    = f.text_field :tamanho
+  .field
+    = f.label :preco
+    = f.text_field :preco
+  .field
+    = f.label :descricao
+    = f.text_field :descricao
+  .actions = f.submit
