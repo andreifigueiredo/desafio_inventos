@@ -2142,3 +2142,48 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 6377ms (Views: 6216.8ms | ActiveRecord: 74.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-28 23:01:00 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (20.0ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:13
+  Rendered home/index.html.slim within layouts/application (397.6ms)
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 1934ms (Views: 1334.4ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/miniaturas/1" for 127.0.0.1 at 2018-09-28 23:01:05 -0300
+Processing by MiniaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiniatura Load (438.0ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_controller.rb:67
+  Rendering miniaturas/show.html.slim within layouts/application
+  Rendered miniaturas/show.html.slim within layouts/application (593.7ms)
+Completed 500 Internal Server Error in 1040ms (ActiveRecord: 438.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `miniatura' for #<#<Class:0x00007fafde87af10>:0x00007fafde879520>
+Did you mean?  @miniatura):
+    2: 
+    3: p 
+    4:   strong Foto:
+    5:   = image_tag("#{miniatura.nome}.jpg")
+    6: p
+    7:   strong Nome:
+    8:   = @miniatura.nome
+  
+app/views/miniaturas/show.html.slim:5:in `_app_views_miniaturas_show_html_slim__461480672999204788_70196664720260'
+Started GET "/miniaturas/1" for 127.0.0.1 at 2018-09-28 23:01:39 -0300
+Processing by MiniaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiniatura Load (0.5ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_controller.rb:67
+  Rendering miniaturas/show.html.slim within layouts/application
+  Rendered miniaturas/show.html.slim within layouts/application (1425.9ms)
+  [1m[36mUser Load (29.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 2496ms (Views: 2354.9ms | ActiveRecord: 45.9ms)
+
+
