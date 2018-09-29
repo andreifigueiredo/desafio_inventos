@@ -10,14 +10,14 @@ table
       th
 
   tbody
-    - @reservas.each do |reserva|
+    - current_user.reservas.each do |reserva|
       tr
         td = reserva.data_da_reserva
         td = reserva.preco_total
-        td = link_to 'Show', reserva
-        td = link_to 'Edit', edit_reserva_path(reserva)
-        td = link_to 'Destroy', reserva, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to 'Detalhes', reserva
+        td = link_to 'Mudar data da Rerva', edit_reserva_path(reserva)
+        td = link_to 'Cancelar Reserva', reserva, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Reserva', new_reserva_path
+= link_to 'Nova Reserva', new_reserva_path

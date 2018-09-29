@@ -19,9 +19,10 @@ table
         td = miniatura.preco
         td = miniatura.descricao
         td = link_to 'Show', miniatura
+/! O usuário nao deve ser capaz de editar ou destruir miniaturas
         td = link_to 'Edit', edit_miniatura_path(miniatura)
         td = link_to 'Destroy', miniatura, data: { confirm: 'Are you sure?' }, method: :delete
-
 br
 
 = link_to 'New Miniatura', new_miniatura_path
+/

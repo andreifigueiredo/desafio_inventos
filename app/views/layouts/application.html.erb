@@ -15,7 +15,8 @@
     
     <%= link_to "Home", root_path %>
     <% if user_signed_in? %>
-      <%= link_to "Faça sua Reserva", reservas_path %>
+      <%= link_to "Minhas Reservas", reservas_path %>
+      <%= link_to "Nova Reserva", new_reserva_path %>
       <%= link_to "Sair", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to "Sign In", new_user_session_path %>

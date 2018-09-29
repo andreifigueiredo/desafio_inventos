@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reserva_miniaturas
   resources :miniaturas
   resources :reservas
   get 'home/index'

@@ -9,6 +9,8 @@
   .field
     = f.label :data_da_reserva
     = f.date_select :data_da_reserva
+
+  .actions = f.submit
+/ O total da reserva não é definido pelo usuário
     = f.label :preco_total
     = f.number_field :preco_total
-  .actions = f.submit
