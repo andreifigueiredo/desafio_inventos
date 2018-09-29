@@ -1,3 +1,3 @@
 class Miniatura < ApplicationRecord
-    has_many :reserva_miniaturas
+    has_and_belongs_to_many :reservas
 end

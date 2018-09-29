@@ -7,6 +7,22 @@ p
 p
   strong Preço Total:
   = @reserva.preco_total
+p 
+  strong Miniaturas Reservadas
+table
+  thead
+    tr
+      th Foto
+      th Nome
+      th Preco
+      th
+  tbody
+    - @reserva.miniaturas.each do |miniatura|
+      tr
+        td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
+        td = miniatura.nome
+        td = miniatura.preco
+        td = link_to 'Detalhes', miniatura
 
 => link_to 'Mudar data da Rerva', edit_reserva_path(@reserva)
 '|

@@ -1,7 +1,6 @@
 class Reserva < ApplicationRecord
-    has_many :reserva_miniaturas
     belongs_to :user
+    has_and_belongs_to_many :miniaturas
 
     validates :data_da_reserva, presence: true
-    validates :preco_total, presence: true
 end

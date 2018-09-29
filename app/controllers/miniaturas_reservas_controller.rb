@@ -1,10 +1,10 @@
-class ReservaMiniaturasController < ApplicationController
+class MiniaturasReservasController < ApplicationController
   before_action :set_reserva_miniatura, only: [:show, :edit, :update, :destroy]
 
   # GET /reserva_miniaturas
   # GET /reserva_miniaturas.json
   def index
-    @reserva_miniaturas = ReservaMiniatura.all
+    @reserva_miniaturas = MiniaturasReserva.all
   end
 
   # GET /reserva_miniaturas/1
@@ -14,7 +14,10 @@ class ReservaMiniaturasController < ApplicationController
 
   # GET /reserva_miniaturas/new
   def new
-    @reserva_miniatura = ReservaMiniatura.new
+    @miniatura = params[:miniatura]
+    @miniatura_nome = Miniatura.find(params[:miniatura]).nome
+
+    @reserva_miniatura = MiniaturasReserva.new    
   end
 
   # GET /reserva_miniaturas/1/edit
@@ -24,7 +27,7 @@ class ReservaMiniaturasController < ApplicationController
   # POST /reserva_miniaturas
   # POST /reserva_miniaturas.json
   def create
-    @reserva_miniatura = ReservaMiniatura.new(reserva_miniatura_params)
+    @reserva_miniatura = MiniaturasReserva.new(reserva_miniatura_params)
 
     respond_to do |format|
       if @reserva_miniatura.save
@@ -64,11 +67,11 @@ class ReservaMiniaturasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reserva_miniatura
-      @reserva_miniatura = ReservaMiniatura.find(params[:id])
+      @reserva_miniatura = MiniaturasReserva.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserva_miniatura_params
-      params.require(:reserva_miniatura).permit(:quantidade)
+      params.require(:reserva_miniatura).permit(:miniatura_id, :reserva_id, :quantidade)
     end
 end

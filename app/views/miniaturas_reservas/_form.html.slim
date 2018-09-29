@@ -1,3 +1,5 @@
+h2 = "Miniatura Selecionada: #{@miniatura_nome}"
+br
 = form_for @reserva_miniatura do |f|
   - if @reserva_miniatura.errors.any?
     #error_explanation
@@ -7,6 +9,9 @@
           li = message
 
   .field
+    = f.hidden_field :miniatura_id, value: @miniatura
+    = f.label :selecione_uma_reserva
+    = f.select(:reserva_id, current_user.reservas.collect{ |reserva| [ reserva.data_da_reserva, reserva.id ] })
     = f.label :quantidade
     = f.number_field :quantidade
   .actions = f.submit

@@ -18,4 +18,5 @@ p
 <!-- O usuário nao deve ser capaz de editar as miniaturas
 => link_to 'Edit', edit_miniatura_path(@miniatura)
 '|-->
-=< link_to 'Voltar', miniaturas_path
+=> link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => @miniatura)
+=< link_to 'Voltar', root_path

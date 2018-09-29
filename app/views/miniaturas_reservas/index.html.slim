@@ -13,9 +13,9 @@ table
       tr
         td = reserva_miniatura.quantidade
         td = link_to 'Show', reserva_miniatura
-        td = link_to 'Edit', edit_reserva_miniatura_path(reserva_miniatura)
+        td = link_to 'Edit', edit_miniaturas_reserva_path(reserva_miniatura)
         td = link_to 'Destroy', reserva_miniatura, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Reserva miniatura', new_reserva_miniatura_path
+= link_to 'New Reserva miniatura', new_miniaturas_reserva_path
