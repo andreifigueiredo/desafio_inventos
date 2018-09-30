@@ -14,6 +14,9 @@ class MiniaturasReservasController < ApplicationController
 
   # GET /miniaturas_reservas/new
   def new
+    @miniatura = params[:miniatura]
+    @miniatura_nome = Miniatura.find(params[:miniatura]).nome 
+
     @miniaturas_reserva = MiniaturasReserva.new
   end
 
@@ -28,7 +31,7 @@ class MiniaturasReservasController < ApplicationController
 
     respond_to do |format|
       if @miniaturas_reserva.save
-        format.html { redirect_to @miniaturas_reserva, notice: 'Miniaturas reserva was successfully created.' }
+        format.html { redirect_to reservas_url, notice: 'Miniaturas reserva was successfully created.' }
         format.json { render :show, status: :created, location: @miniaturas_reserva }
       else
         format.html { render :new }
@@ -69,6 +72,6 @@ class MiniaturasReservasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def miniaturas_reserva_params
-      params.require(:miniaturas_reserva).permit(:quantidade)
+      params.require(:miniaturas_reserva).permit(:miniatura_id, :reserva_id, :quantidade)
     end
 end
