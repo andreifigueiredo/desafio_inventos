@@ -13,7 +13,7 @@ table
       tr
         td = miniaturas_reserva.quantidade
         td = link_to 'Show', miniaturas_reserva
-        td = link_to 'Edit', edit_miniaturas_reserva_path(miniaturas_reserva)
+        td = link_to 'Edit', edit_miniaturas_reserva_path(miniaturas_reserva.miniatura_id, miniaturas_reserva.reserva_id)
         td = link_to 'Destroy', miniaturas_reserva, data: { confirm: 'Are you sure?' }, method: :delete
 
 br

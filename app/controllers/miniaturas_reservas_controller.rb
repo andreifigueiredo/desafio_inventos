@@ -1,5 +1,6 @@
 class MiniaturasReservasController < ApplicationController
   before_action :set_miniaturas_reserva, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /miniaturas_reservas
   # GET /miniaturas_reservas.json
@@ -37,6 +38,14 @@ class MiniaturasReservasController < ApplicationController
         format.html { render :new }
         format.json { render json: @miniaturas_reserva.errors, status: :unprocessable_entity }
       end
+      @reserva = Reserva.where(id: @miniaturas_reserva.reserva_id).take
+      @miniatura = Miniatura.where(id: @miniaturas_reserva.miniatura_id).take
+      if(@reserva.preco_total == nil)
+        @preco_total = (@miniatura.preco * @miniaturas_reserva.quantidade)
+      else
+        @preco_total = @reserva.preco_total + (@miniatura.preco * @miniaturas_reserva.quantidade)
+      end
+      @reserva.update(preco_total: @preco_total)
     end
   end
 
@@ -67,7 +76,7 @@ class MiniaturasReservasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_miniaturas_reserva
-      @miniaturas_reserva = MiniaturasReserva.find(params[:id])
+      @miniaturas_reserva = MiniaturasReserva.find(params[:miniatura_id, :reserva_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
