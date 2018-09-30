@@ -2,8 +2,8 @@ p#notice = notice
 
 p
   strong Quantidade:
-  = @reserva_miniatura.quantidade
-<!--
-=> link_to 'Edit', edit_miniaturas_reserva_path(@reserva_miniatura)
-'|-->
-=< link_to 'Voltar', root_path
+  = @miniaturas_reserva.quantidade
+
+=> link_to 'Edit', edit_miniaturas_reserva_path(@miniaturas_reserva)
+'|
+=< link_to 'Back', miniaturas_reservas_path

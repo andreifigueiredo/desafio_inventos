@@ -1,4 +1,4 @@
-h1 Listing reserva_miniaturas
+h1 Listing miniaturas_reservas
 
 table
   thead
@@ -9,13 +9,13 @@ table
       th
 
   tbody
-    - @reserva_miniaturas.each do |reserva_miniatura|
+    - @miniaturas_reservas.each do |miniaturas_reserva|
       tr
-        td = reserva_miniatura.quantidade
-        td = link_to 'Show', reserva_miniatura
-        td = link_to 'Edit', edit_miniaturas_reserva_path(reserva_miniatura)
-        td = link_to 'Destroy', reserva_miniatura, data: { confirm: 'Are you sure?' }, method: :delete
+        td = miniaturas_reserva.quantidade
+        td = link_to 'Show', miniaturas_reserva
+        td = link_to 'Edit', edit_miniaturas_reserva_path(miniaturas_reserva)
+        td = link_to 'Destroy', miniaturas_reserva, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Reserva miniatura', new_miniaturas_reserva_path
+= link_to 'New Miniaturas reserva', new_miniaturas_reserva_path

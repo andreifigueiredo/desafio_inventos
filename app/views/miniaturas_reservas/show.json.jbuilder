@@ -1,1 +1,1 @@
-json.partial! "reserva_miniaturas/reserva_miniatura", reserva_miniatura: @reserva_miniatura
+json.partial! "miniaturas_reservas/miniaturas_reserva", miniaturas_reserva: @miniaturas_reserva

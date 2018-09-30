@@ -1,17 +1,12 @@
-h2 = "Miniatura Selecionada: #{@miniatura_nome}"
-br
-= form_for @reserva_miniatura do |f|
-  - if @reserva_miniatura.errors.any?
+= form_for @miniaturas_reserva do |f|
+  - if @miniaturas_reserva.errors.any?
     #error_explanation
-      h2 = "#{pluralize(@reserva_miniatura.errors.count, "error")} prohibited this reserva_miniatura from being saved:"
+      h2 = "#{pluralize(@miniaturas_reserva.errors.count, "error")} prohibited this miniaturas_reserva from being saved:"
       ul
-        - @reserva_miniatura.errors.full_messages.each do |message|
+        - @miniaturas_reserva.errors.full_messages.each do |message|
           li = message
 
   .field
-    = f.hidden_field :miniatura_id, value: @miniatura
-    = f.label :selecione_uma_reserva
-    = f.select(:reserva_id, current_user.reservas.collect{ |reserva| [ reserva.data_da_reserva, reserva.id ] })
     = f.label :quantidade
     = f.number_field :quantidade
   .actions = f.submit
