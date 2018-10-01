@@ -15,9 +15,3 @@ table
         td = reserva.data_da_reserva
         td = reserva.preco_total
         td = link_to 'Detalhes', reserva
-        td = link_to 'Mudar data da Rerva', edit_reserva_path(reserva)
-        td = link_to 'Cancelar Reserva', reserva, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'Nova Reserva', new_reserva_path
