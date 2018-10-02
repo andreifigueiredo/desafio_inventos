@@ -1,10 +1,7 @@
-p 
-    Olá senhor, segue abaixo a confirmação da sua reserva
-p 
-    Qualquer duvida favor entrar em contato com: andreipaesfigueiredo@gmail.com
-p
-  strong Data da reserva:
-  = @reserva.data_da_reserva
+h3 Olá senhor,
+br
+h4 Seguem abaixo as informações  da sua reserva efetudade em : #{@reserva.data_da_reserva}
+h4 Qualquer duvida favor entrar em contato com: andreipaesfigueiredo@gmail.com
 
 p
   strong Preço Total:
@@ -14,14 +11,12 @@ p
 table
   thead
     tr
-      th Foto
       th Nome
       th Preco
       th Quantidade
   tbody
     - @reserva.miniaturas.each do |miniatura|
       tr
-        td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
         td = miniatura.nome
         td = "R$#{miniatura.preco}0"
         td = miniatura.getQuantidade(@reserva)
