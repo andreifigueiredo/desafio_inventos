@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :miniaturas_reservas
   resources :miniaturas
-  resources :reservas
+  resources :reservas do
+    collection do
+      get 'confirmar_reserva'
+    end
+  end
   get 'home/index'
   root to: 'home#index'
   devise_for :users

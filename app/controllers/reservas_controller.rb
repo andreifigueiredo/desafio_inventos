@@ -22,6 +22,17 @@ class ReservasController < ApplicationController
   def edit
   end
 
+  def confirmar_reserva
+    @reserva = Reserva.find(params[:id])
+    if @reserva.preco_total != nil 
+      @reserva.update(:confirmation => true)
+      redirect_to @reserva, notice: 'Reserva Confirmada, verifique o email'
+    else
+      redirect_to @reserva, notice: 'Adicione Miniaturas a Reserva'
+    end
+
+  end
+
   # POST /reservas
   # POST /reservas.json
   def create

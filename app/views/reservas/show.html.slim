@@ -24,6 +24,7 @@ table
         td = miniatura.preco
         td = link_to 'Detalhes', miniatura
 
-=> link_to 'Mudar data da Rerva', edit_reserva_path(@reserva)
+-if !reserva_ativa.confirmation
+  => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
 '|
 =< link_to 'Voltar', reservas_path
