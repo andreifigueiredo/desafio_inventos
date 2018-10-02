@@ -36,9 +36,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #Bootstrap
 gem 'bootstrap', '~> 4.1.3'
-gem 'bootstrap-sass', '~> 3.3.7'
-gem 'bootstrap_jt'
-
 #Jquery
 gem 'jquery-rails'
 
