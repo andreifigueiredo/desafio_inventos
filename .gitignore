@@ -1,2 +1,5 @@
+/.bundle
+/log/*
+!/log/.keep
 #Ignore application configuration
 /config/application.yml
