@@ -10,8 +10,8 @@ br
 
   .field
     = f.hidden_field :miniatura_id, value: @miniatura
-    = f.label :selecione_uma_reserva
-    = f.select(:reserva_id, current_user.reservas.collect{ |reserva| [ reserva.data_da_reserva, reserva.id ] })
+    -if reserva_ativa.confirmation
+    = f.hidden_field :reserva_id, value: @reserva.id
     = f.label :quantidade
     = f.number_field :quantidade
   .actions = f.submit
