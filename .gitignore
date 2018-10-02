@@ -1,4 +1,5 @@
 /.bundle
+#Ignore logs
 /log/*
 !/log/.keep
 #Ignore application configuration
