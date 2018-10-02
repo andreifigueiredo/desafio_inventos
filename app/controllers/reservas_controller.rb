@@ -25,6 +25,7 @@ class ReservasController < ApplicationController
   def confirmar_reserva
     @reserva = Reserva.find(params[:id])
     if @reserva.preco_total != nil 
+      ConfirmationReservaMailer.notify_user(@reserva).deliver
       @reserva.update(:confirmation => true)
       redirect_to @reserva, notice: 'Reserva Confirmada, verifique o email'
     else

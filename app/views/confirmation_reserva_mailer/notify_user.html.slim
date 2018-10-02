@@ -1,5 +1,7 @@
-p#notice = notice
-
+p 
+    Olá senhor, segue abaixo a confirmação da sua reserva
+p 
+    Qualquer duvida favor entrar em contato com: andreipaesfigueiredo@gmail.com
 p
   strong Data da reserva:
   = @reserva.data_da_reserva
@@ -16,7 +18,6 @@ table
       th Nome
       th Preco
       th Quantidade
-      th
   tbody
     - @reserva.miniaturas.each do |miniatura|
       tr
@@ -24,10 +25,3 @@ table
         td = miniatura.nome
         td = "R$#{miniatura.preco}0"
         td = miniatura.getQuantidade(@reserva)
-        td = link_to 'Detalhes', miniatura
-
--if !reserva_ativa.confirmation
-  => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
-  => link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete
-'|
-=< link_to 'Voltar', reservas_path

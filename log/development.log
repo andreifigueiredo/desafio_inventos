@@ -10686,3 +10686,665 @@ Processing by MiniaturasReservasController#create as HTML
 Completed 200 OK in 1866ms (Views: 1224.6ms | ActiveRecord: 15.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-02 10:42:54 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (19.0ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (2607.5ms)
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 5295ms (Views: 5023.3ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 10:48:48 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (32.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (1673.8ms)
+  [1m[36mUser Load (72.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 2916ms (Views: 2559.8ms | ActiveRecord: 108.2ms)
+
+
+Started GET "/miniaturas/1" for 127.0.0.1 at 2018-10-02 10:49:47 -0300
+Processing by MiniaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_controller.rb:67
+  Rendering miniaturas/show.html.slim within layouts/application
+  Rendered miniaturas/show.html.slim within layouts/application (7.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 92ms (Views: 75.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 10:49:52 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (12.2ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/miniaturas/1" for 127.0.0.1 at 2018-10-02 10:49:56 -0300
+Processing by MiniaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_controller.rb:67
+  Rendering miniaturas/show.html.slim within layouts/application
+  Rendered miniaturas/show.html.slim within layouts/application (8.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 106ms (Views: 103.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-10-02 10:50:05 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (135.4ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 244ms (Views: 180.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reservas/3" for 127.0.0.1 at 2018-10-02 10:50:07 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:79
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (11.0ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 3]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 3], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mCACHE MiniaturasReserva Load (0.0ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 3], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mCACHE MiniaturasReserva Load (0.1ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 3], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mCACHE MiniaturasReserva Load (0.2ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 3], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mCACHE MiniaturasReserva Load (0.0ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 3], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (233.9ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 297ms (Views: 279.9ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/reservas/new" for 127.0.0.1 at 2018-10-02 10:50:11 -0300
+Processing by ReservasController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/new.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (215.8ms)
+  Rendered reservas/new.html.slim within layouts/application (233.3ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 338ms (Views: 318.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/reservas" for 127.0.0.1 at 2018-10-02 10:50:19 -0300
+Processing by ReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YyYWXtS5zBDlKD44CyUcxeeP/YQhYvpeXt4s8TCwECxfdV99hrZU4VI3d3LuYH0U4g/RGi1n2gSnQM1q7WkjXA==", "reserva"=>{"data_da_reserva(1i)"=>"2018", "data_da_reserva(2i)"=>"10", "data_da_reserva(3i)"=>"5"}, "commit"=>"Create Reserva"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:42
+  [1m[36mReserva Create (52.7ms)[0m  [1m[32mINSERT INTO "reservas" ("data_da_reserva", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["data_da_reserva", "2018-10-05"], ["created_at", "2018-10-02 13:50:19.677909"], ["updated_at", "2018-10-02 13:50:19.677909"], ["user_id", 1]]
+  ↳ app/controllers/reservas_controller.rb:42
+  [1m[35m (100.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:42
+Redirected to http://localhost:3000/reservas/9
+Completed 302 Found in 199ms (ActiveRecord: 154.0ms)
+
+
+Started GET "/reservas/9" for 127.0.0.1 at 2018-10-02 10:50:19 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:79
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 9]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (16.3ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 82ms (Views: 75.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/reservas/9" for 127.0.0.1 at 2018-10-02 10:50:27 -0300
+Processing by ReservasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"62JXXMLIi1Z6yCvvaUMNqHo5MDailE8+x5SxLb80R9RMzQB9FMnC43Cj3M7JrPoSan9y0vIvjxSiQrFJG73WCQ==", "id"=>"9"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:79
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:69
+  [1m[36mReserva::HABTM_Miniaturas Destroy (0.3ms)[0m  [1m[31mDELETE FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 9]]
+  ↳ app/controllers/reservas_controller.rb:69
+  [1m[36mReserva Destroy (1.7ms)[0m  [1m[31mDELETE FROM "reservas" WHERE "reservas"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/reservas_controller.rb:69
+  [1m[35m (98.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:69
+Redirected to http://localhost:3000/reservas
+Completed 302 Found in 119ms (ActiveRecord: 100.6ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-10-02 10:50:28 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (10.8ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 111ms (Views: 106.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 10:50:32 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (16.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reservas/new" for 127.0.0.1 at 2018-10-02 11:32:31 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReservasController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/new.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (516.4ms)
+  Rendered reservas/new.html.slim within layouts/application (619.5ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 2935ms (Views: 2129.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/reservas" for 127.0.0.1 at 2018-10-02 11:32:45 -0300
+Processing by ReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mem0MvwKQ+erdZY0ujOjssfYvwnAWOsgD07kX7yFMCcNuv0RrgXbFhxq335fdsJjwliTl8xdy3r20AXEYVwDVw==", "reserva"=>{"data_da_reserva(1i)"=>"2018", "data_da_reserva(2i)"=>"10", "data_da_reserva(3i)"=>"3"}, "commit"=>"Create Reserva"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:43
+  [1m[36mReserva Create (3.4ms)[0m  [1m[32mINSERT INTO "reservas" ("data_da_reserva", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["data_da_reserva", "2018-10-03"], ["created_at", "2018-10-02 14:32:45.790482"], ["updated_at", "2018-10-02 14:32:45.790482"], ["user_id", 1]]
+  ↳ app/controllers/reservas_controller.rb:43
+  [1m[35m (149.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:43
+Redirected to http://localhost:3000/reservas/10
+Completed 302 Found in 162ms (ActiveRecord: 153.1ms)
+
+
+Started GET "/reservas/10" for 127.0.0.1 at 2018-10-02 11:32:46 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 10]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (97.0ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 171ms (Views: 141.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 11:32:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (19.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 96ms (Views: 78.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/miniaturas_reservas/new?miniatura=1" for 127.0.0.1 at 2018-10-02 11:32:54 -0300
+Processing by MiniaturasReservasController#new as HTML
+  Parameters: {"miniatura"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:19
+  Rendering miniaturas_reservas/new.html.slim within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered miniaturas_reservas/_form.html.slim (140.7ms)
+  Rendered miniaturas_reservas/new.html.slim within layouts/application (161.2ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 259ms (Views: 207.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/miniaturas_reservas" for 127.0.0.1 at 2018-10-02 11:32:59 -0300
+Processing by MiniaturasReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeFT9dLahy/FQ9JPBiMr2d9il0Z1IzYRjdU9hqT9378bUnxb60OAZxqLX6N0gzo5QoCVHIUbPcfbJjacxwn3UQ==", "miniaturas_reserva"=>{"miniatura_id"=>"1", "reserva_id"=>"10", "quantidade"=>"5"}, "commit"=>"Create Miniaturas reserva"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mMiniaturasReserva Create (5.1ms)[0m  [1m[32mINSERT INTO "miniaturas_reservas" ("reserva_id", "miniatura_id", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reserva_id", 10], ["miniatura_id", 1], ["quantidade", 5], ["created_at", "2018-10-02 14:32:59.535537"], ["updated_at", "2018-10-02 14:32:59.535537"]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[35m (128.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:41
+  [1m[36mMiniatura Load (0.4ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+  [1m[36mReserva Update (0.9ms)[0m  [1m[33mUPDATE "reservas" SET "preco_total" = ?, "updated_at" = ? WHERE "reservas"."id" = ?[0m  [["preco_total", 105.0], ["updated_at", "2018-10-02 14:32:59.678837"], ["id", 10]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+  [1m[35m (78.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+Redirected to http://localhost:3000/reservas
+Completed 302 Found in 230ms (ActiveRecord: 214.3ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-10-02 11:32:59 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (16.1ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 95ms (Views: 74.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/reservas/10" for 127.0.0.1 at 2018-10-02 11:33:03 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 10]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 10], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (19.1ms)
+  [1m[36mCACHE Reserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 91ms (Views: 84.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reservas/confirmar_reserva?id=10" for 127.0.0.1 at 2018-10-02 11:33:05 -0300
+Processing by ReservasController#confirmar_reserva as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:26
+  Rendering confirmation_reserva_mailer/notify_user.html.slim within layouts/mailer
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 10]]
+  ↳ app/views/confirmation_reserva_mailer/notify_user.html.slim:23
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 10], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  Rendered confirmation_reserva_mailer/notify_user.html.slim within layouts/mailer (73.7ms)
+ConfirmationReservaMailer#notify_user: processed outbound mail in 110.8ms
+Completed 500 Internal Server Error in 1874ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    26:         td = miniatura.nome
+    27:         td = "R$#{miniatura.preco}0"
+    28:         td = miniatura.getQuantidade(@reserva)
+    29:         td = link_to 'Detalhes', miniatura
+  
+app/views/confirmation_reserva_mailer/notify_user.html.slim:29:in `block in _app_views_confirmation_reserva_mailer_notify_user_html_slim__3504142111594016879_70178599032540'
+app/views/confirmation_reserva_mailer/notify_user.html.slim:23:in `_app_views_confirmation_reserva_mailer_notify_user_html_slim__3504142111594016879_70178599032540'
+app/mailers/confirmation_reserva_mailer.rb:4:in `notify_user'
+app/controllers/reservas_controller.rb:28:in `confirmar_reserva'
+Started GET "/reservas/confirmar_reserva?id=10" for 127.0.0.1 at 2018-10-02 11:34:17 -0300
+Processing by ReservasController#confirmar_reserva as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:26
+  Rendering confirmation_reserva_mailer/notify_user.html.slim within layouts/mailer
+  [1m[36mMiniatura Load (2.0ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 10]]
+  ↳ app/views/confirmation_reserva_mailer/notify_user.html.slim:22
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 10], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  Rendered confirmation_reserva_mailer/notify_user.html.slim within layouts/mailer (16.0ms)
+ConfirmationReservaMailer#notify_user: processed outbound mail in 1465.0ms
+Sent mail to andreipaesfigueiredo@gmail.com (108.9ms)
+Date: Tue, 02 Oct 2018 11:34:19 -0300
+From: andreipaesfigueiredo@gmail.com
+To: andreipaesfigueiredo@gmail.com
+Message-ID: <5bb381eb47328_3a142b265b39acb886758@andrei-Latitude-E6400.mail>
+Subject: Reserva Efetuada
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p><Ol=C3=A1>senhor, segue abaixo a confirma=C3=A7=C3=A3o da sua rese=
+rva</Ol=C3=A1></p><p><Qualquer>duvida favor entrar em contato com: andrei=
+paesfigueiredo@gmail.com</Qualquer></p><p><strong>Data da reserva:</stron=
+g>2018-10-03</p><p><strong>Pre=C3=A7o Total:</strong>R$105.00</p><p><stro=
+ng>Miniaturas Reservadas</strong></p><table><thead><tr><th>Foto</th><th>N=
+ome</th><th>Preco</th><th>Quantidade</th></tr></thead><tbody><tr><td><img=
+ style=3D"height:30%;width:30%;" src=3D"/assets/BoredSillyKevin-131aafa9e=
+b9816bbc41d4099670b2fb842c1e784b00bf9daf32772c9274aea07.jpg" /></td><td>B=
+oredSillyKevin</td><td>R$21.00</td><td>5</td></tr></tbody></table>
+  </body>
+</html>
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:29
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:29
+  [1m[36mReserva Update (2.3ms)[0m  [1m[33mUPDATE "reservas" SET "confirmation" = ?, "updated_at" = ? WHERE "reservas"."id" = ?[0m  [["confirmation", 1], ["updated_at", "2018-10-02 14:34:19.361776"], ["id", 10]]
+  ↳ app/controllers/reservas_controller.rb:29
+  [1m[35m (160.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:29
+Redirected to http://localhost:3000/reservas/10
+Completed 302 Found in 1751ms (ActiveRecord: 166.4ms)
+
+
+Started GET "/reservas/10" for 127.0.0.1 at 2018-10-02 11:34:19 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.4ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 10]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 10], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (16.3ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 78ms (Views: 72.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reservas/new" for 127.0.0.1 at 2018-10-02 11:39:34 -0300
+Processing by ReservasController#new as HTML
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/new.html.slim within layouts/application
+  Rendered reservas/_form.html.slim (74.8ms)
+  Rendered reservas/new.html.slim within layouts/application (133.4ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 1202ms (Views: 906.2ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/reservas" for 127.0.0.1 at 2018-10-02 11:39:43 -0300
+Processing by ReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"35norXQti5dDVIZ7m6F9BLUzWuoovanMaMHfpsq466vjyqGOJiITZvRLzzF+5BzVsLN2dCS4iZaRXz49F2HY2w==", "reserva"=>{"data_da_reserva(1i)"=>"2018", "data_da_reserva(2i)"=>"10", "data_da_reserva(3i)"=>"12"}, "commit"=>"Create Reserva"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (25.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:43
+  [1m[36mReserva Create (55.9ms)[0m  [1m[32mINSERT INTO "reservas" ("data_da_reserva", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["data_da_reserva", "2018-10-12"], ["created_at", "2018-10-02 14:39:43.444687"], ["updated_at", "2018-10-02 14:39:43.444687"], ["user_id", 1]]
+  ↳ app/controllers/reservas_controller.rb:43
+  [1m[35m (167.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:43
+Redirected to http://localhost:3000/reservas/11
+Completed 302 Found in 274ms (ActiveRecord: 249.4ms)
+
+
+Started GET "/reservas/11" for 127.0.0.1 at 2018-10-02 11:39:43 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 11]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (44.1ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 142ms (Views: 91.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 11:39:46 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (34.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 176ms (Views: 95.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/miniaturas_reservas/new?miniatura=1" for 127.0.0.1 at 2018-10-02 11:39:48 -0300
+Processing by MiniaturasReservasController#new as HTML
+  Parameters: {"miniatura"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMiniatura Load (0.1ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:19
+  Rendering miniaturas_reservas/new.html.slim within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered miniaturas_reservas/_form.html.slim (155.1ms)
+  Rendered miniaturas_reservas/new.html.slim within layouts/application (166.1ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 281ms (Views: 228.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/miniaturas_reservas" for 127.0.0.1 at 2018-10-02 11:39:53 -0300
+Processing by MiniaturasReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JqQAoYxU4NlmEBjAMEQ4esQWhN5yfAFYvN6btupN7j0EFy8Ptc3nkbnYlSxC5CmaWfSGhIJECo7qLZCsibnG0w==", "miniaturas_reserva"=>{"miniatura_id"=>"1", "reserva_id"=>"11", "quantidade"=>"10"}, "commit"=>"Create Miniaturas reserva"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mMiniaturasReserva Create (2.5ms)[0m  [1m[32mINSERT INTO "miniaturas_reservas" ("reserva_id", "miniatura_id", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["reserva_id", 11], ["miniatura_id", 1], ["quantidade", 10], ["created_at", "2018-10-02 14:39:53.109978"], ["updated_at", "2018-10-02 14:39:53.109978"]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[35m (85.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:41
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+  [1m[36mReserva Update (28.0ms)[0m  [1m[33mUPDATE "reservas" SET "preco_total" = ?, "updated_at" = ? WHERE "reservas"."id" = ?[0m  [["preco_total", 210.0], ["updated_at", "2018-10-02 14:39:53.207647"], ["id", 11]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+  [1m[35m (107.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:49
+Redirected to http://localhost:3000/reservas
+Completed 302 Found in 261ms (ActiveRecord: 224.9ms)
+
+
+Started GET "/reservas" for 127.0.0.1 at 2018-10-02 11:39:53 -0300
+Processing by ReservasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/index.html.slim within layouts/application
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT "reservas".* FROM "reservas" WHERE "reservas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/reservas/index.html.slim:13
+  Rendered reservas/index.html.slim within layouts/application (8.2ms)
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 87ms (Views: 65.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reservas/11" for 127.0.0.1 at 2018-10-02 11:39:56 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:80
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 11]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 11], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (30.5ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 92ms (Views: 83.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reservas/confirmar_reserva?id=11" for 127.0.0.1 at 2018-10-02 11:39:58 -0300
+Processing by ReservasController#confirmar_reserva as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:26
+  Rendering confirmation_reserva_mailer/notify_user.html.slim within layouts/mailer
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 11]]
+  ↳ app/views/confirmation_reserva_mailer/notify_user.html.slim:22
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 11], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  Rendered confirmation_reserva_mailer/notify_user.html.slim within layouts/mailer (11.5ms)
+ConfirmationReservaMailer#notify_user: processed outbound mail in 70.7ms
+Sent mail to andreipaesfigueiredo@gmail.com (109.8ms)
+Date: Tue, 02 Oct 2018 11:39:58 -0300
+From: andreipaesfigueiredo@gmail.com
+To: andreipaesfigueiredo@gmail.com
+Message-ID: <5bb3833edb9cc_3a142b265b39af3886886@andrei-Latitude-E6400.mail>
+Subject: Reserva Efetuada
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p><Ol=C3=A1>senhor, segue abaixo a confirma=C3=A7=C3=A3o da sua rese=
+rva</Ol=C3=A1></p><p><Qualquer>duvida favor entrar em contato com: andrei=
+paesfigueiredo@gmail.com</Qualquer></p><p><strong>Data da reserva:</stron=
+g>2018-10-12</p><p><strong>Pre=C3=A7o Total:</strong>R$210.00</p><p><stro=
+ng>Miniaturas Reservadas</strong></p><table><thead><tr><th>Foto</th><th>N=
+ome</th><th>Preco</th><th>Quantidade</th></tr></thead><tbody><tr><td><img=
+ style=3D"height:30%;width:30%;" src=3D"/assets/BoredSillyKevin-131aafa9e=
+b9816bbc41d4099670b2fb842c1e784b00bf9daf32772c9274aea07.jpg" /></td><td>B=
+oredSillyKevin</td><td>R$21.00</td><td>10</td></tr></tbody></table>
+  </body>
+</html>
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservas_controller.rb:29
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:29
+  [1m[36mReserva Update (1.3ms)[0m  [1m[33mUPDATE "reservas" SET "confirmation" = ?, "updated_at" = ? WHERE "reservas"."id" = ?[0m  [["confirmation", 1], ["updated_at", "2018-10-02 14:39:59.010929"], ["id", 11]]
+  ↳ app/controllers/reservas_controller.rb:29
+  [1m[35m (111.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservas_controller.rb:29
+Redirected to http://localhost:3000/reservas/11
+Completed 302 Found in 380ms (ActiveRecord: 113.9ms)
+
+
+Started GET "/reservas/11" for 127.0.0.1 at 2018-10-02 11:39:59 -0300
+Processing by ReservasController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/reservas_controller.rb:80
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering reservas/show.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas" INNER JOIN "miniaturas_reservas" ON "miniaturas"."id" = "miniaturas_reservas"."miniatura_id" WHERE "miniaturas_reservas"."reserva_id" = ?[0m  [["reserva_id", 11]]
+  ↳ app/views/reservas/show.html.slim:21
+  [1m[36mMiniaturasReserva Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas_reservas".* FROM "miniaturas_reservas" WHERE "miniaturas_reservas"."miniatura_id" = ? AND "miniaturas_reservas"."reserva_id" = ? LIMIT ?[0m  [["miniatura_id", 1], ["reserva_id", 11], ["LIMIT", 1]]
+  ↳ app/models/miniatura.rb:5
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered reservas/show.html.slim within layouts/application (16.2ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 1.3ms)
+
+
