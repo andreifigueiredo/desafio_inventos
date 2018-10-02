@@ -32,7 +32,7 @@ class MiniaturasReservasController < ApplicationController
 
     respond_to do |format|
       if @miniaturas_reserva.save
-        format.html { redirect_to reservas_url, notice: 'Miniaturas reserva was successfully created.' }
+        format.html { redirect_to home_index_url, notice: 'Miniaturas reserva was successfully created.' }
         format.json { render :show, status: :created, location: @miniaturas_reserva }
       else
         format.html { render :new }

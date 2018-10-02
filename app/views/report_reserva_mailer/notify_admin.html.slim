@@ -1,0 +1,24 @@
+h3 Olá senhor,
+br
+h4 Seguem abaixo as informações  a reserva efetudade em : #{@reserva.data_da_reserva}
+
+p 
+  strong Usuário:
+  = @user.email
+p
+  strong Preço Total:
+  = "R$#{@reserva.preco_total}0"
+p 
+  strong Miniaturas Reservadas
+table
+  thead
+    tr
+      th Nome
+      th Preco
+      th Quantidade
+  tbody
+    - @reserva.miniaturas.each do |miniatura|
+      tr
+        td = miniatura.nome
+        td = "R$#{miniatura.preco}0"
+        td = miniatura.getQuantidade(@reserva)

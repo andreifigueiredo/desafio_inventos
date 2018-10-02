@@ -1,6 +1,7 @@
 class ConfirmationReservaMailer < ApplicationMailer
-    def notify_user(reserva)
+    def notify_user(reserva, user)
        @reserva = reserva
-       mail(to: "miguel@inventosdigitais.com.br", subject: "Reserva Efetuada")
+       @user = user
+       mail(to: @user.email, subject: "Reserva Efetuada")
     end
 end
