@@ -40,12 +40,14 @@ class MiniaturasReservasController < ApplicationController
       end
       @reserva = Reserva.where(id: @miniaturas_reserva.reserva_id).take
       @miniatura = Miniatura.where(id: @miniaturas_reserva.miniatura_id).take
-      if(@reserva.preco_total == nil)
-        @preco_total = (@miniatura.preco * @miniaturas_reserva.quantidade)
-      else
-        @preco_total = @reserva.preco_total + (@miniatura.preco * @miniaturas_reserva.quantidade)
+      if(@reserva != nil)
+        if(@reserva.preco_total == nil)
+          @preco_total = (@miniatura.preco * @miniaturas_reserva.quantidade)
+        else
+          @preco_total = @reserva.preco_total + (@miniatura.preco * @miniaturas_reserva.quantidade)
+        end
+        @reserva.update(preco_total: @preco_total)
       end
-      @reserva.update(preco_total: @preco_total)
     end
   end
 

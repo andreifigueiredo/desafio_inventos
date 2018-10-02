@@ -10572,3 +10572,117 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 347ms (Views: 326.4ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-02 01:08:41 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (14.7ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (1035.3ms)
+  [1m[36mUser Load (27.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+  [1m[36mReserva Load (0.4ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 2198ms (Views: 2053.0ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/miniaturas_reservas/new?miniatura=1" for 127.0.0.1 at 2018-10-02 01:08:49 -0300
+Processing by MiniaturasReservasController#new as HTML
+  Parameters: {"miniatura"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:19
+  Rendering miniaturas_reservas/new.html.slim within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered miniaturas_reservas/_form.html.slim (65.2ms)
+  Rendered miniaturas_reservas/new.html.slim within layouts/application (92.9ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 955ms (Views: 871.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/miniaturas_reservas" for 127.0.0.1 at 2018-10-02 01:08:55 -0300
+Processing by MiniaturasReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ok+ApIxzmNAbrYqEXw1UIyTNQBMp33Ra50c2NGBugFrx8IhTPpIq/E2KNOGKJSLLbzDKHLv7zIjhBVidFC6u9Q==", "miniaturas_reserva"=>{"miniatura_id"=>"1", "quantidade"=>"5"}, "commit"=>"Create Miniaturas reserva"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mMiniaturasReserva Create (648.1ms)[0m  [1m[32mINSERT INTO "miniaturas_reservas" ("miniatura_id", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["miniatura_id", 1], ["quantidade", 5], ["created_at", "2018-10-02 04:08:56.054851"], ["updated_at", "2018-10-02 04:08:56.054851"]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+Completed 500 Internal Server Error in 883ms (ActiveRecord: 655.6ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: miniaturas_reservas.reserva_id: INSERT INTO "miniaturas_reservas" ("miniatura_id", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?)):
+  
+app/controllers/miniaturas_reservas_controller.rb:34:in `block in create'
+app/controllers/miniaturas_reservas_controller.rb:33:in `create'
+Started POST "/miniaturas_reservas" for 127.0.0.1 at 2018-10-02 01:11:50 -0300
+Processing by MiniaturasReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ok+ApIxzmNAbrYqEXw1UIyTNQBMp33Ra50c2NGBugFrx8IhTPpIq/E2KNOGKJSLLbzDKHLv7zIjhBVidFC6u9Q==", "miniaturas_reserva"=>{"miniatura_id"=>"1", "quantidade"=>"5"}, "commit"=>"Create Miniaturas reserva"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:41
+  [1m[36mMiniatura Load (0.2ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:42
+Completed 500 Internal Server Error in 1001ms (ActiveRecord: 129.7ms)
+
+
+  
+NoMethodError (undefined method `preco_total' for nil:NilClass):
+  
+app/controllers/miniaturas_reservas_controller.rb:43:in `block in create'
+app/controllers/miniaturas_reservas_controller.rb:33:in `create'
+Started POST "/miniaturas_reservas" for 127.0.0.1 at 2018-10-02 01:13:09 -0300
+Processing by MiniaturasReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ok+ApIxzmNAbrYqEXw1UIyTNQBMp33Ra50c2NGBugFrx8IhTPpIq/E2KNOGKJSLLbzDKHLv7zIjhBVidFC6u9Q==", "miniaturas_reserva"=>{"miniatura_id"=>"1", "quantidade"=>"5"}, "commit"=>"Create Miniaturas reserva"}
+  [1m[36mUser Load (51.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mReserva Load (24.7ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:41
+  [1m[36mMiniatura Load (2.9ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:42
+Completed 500 Internal Server Error in 1110ms (ActiveRecord: 82.7ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/miniaturas_reservas_controller.rb:50:in `block in create'
+app/controllers/miniaturas_reservas_controller.rb:33:in `create'
+Started POST "/miniaturas_reservas" for 127.0.0.1 at 2018-10-02 01:13:50 -0300
+Processing by MiniaturasReservasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ok+ApIxzmNAbrYqEXw1UIyTNQBMp33Ra50c2NGBugFrx8IhTPpIq/E2KNOGKJSLLbzDKHLv7zIjhBVidFC6u9Q==", "miniaturas_reserva"=>{"miniatura_id"=>"1", "quantidade"=>"5"}, "commit"=>"Create Miniaturas reserva"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/andrei/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/miniaturas_reservas_controller.rb:34
+  [1m[36mReserva Load (0.2ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" WHERE "reservas"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:41
+  [1m[36mMiniatura Load (5.5ms)[0m  [1m[34mSELECT  "miniaturas".* FROM "miniaturas" WHERE "miniaturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/miniaturas_reservas_controller.rb:42
+  Rendering miniaturas_reservas/new.html.slim within layouts/application
+  [1m[36mReserva Load (0.3ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered miniaturas_reservas/_form.html.slim (211.7ms)
+  Rendered miniaturas_reservas/new.html.slim within layouts/application (370.9ms)
+  [1m[36mCACHE Reserva Load (0.0ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 1866ms (Views: 1224.6ms | ActiveRecord: 15.8ms)
+
+

@@ -15,5 +15,4 @@ table
         td = miniatura.nome
         td = "R$#{miniatura.preco}0"
         td = link_to 'Detalhes', miniatura
-        -if reserva_ativa.confirmation == false
-         td = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura)
+        td = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura)
