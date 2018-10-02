@@ -16362,3 +16362,42 @@ Processing by ReservasController#index as HTML
 Completed 200 OK in 54ms (Views: 47.2ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-02 20:25:22 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.9ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (19.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 20:25:24 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.3ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (17.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-02 20:25:25 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.slim within layouts/application
+  [1m[36mMiniatura Load (0.4ms)[0m  [1m[34mSELECT "miniaturas".* FROM "miniaturas"[0m
+  ↳ app/views/home/index.html.slim:12
+  Rendered home/index.html.slim within layouts/application (15.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  [1m[36mReserva Load (0.1ms)[0m  [1m[34mSELECT  "reservas".* FROM "reservas" ORDER BY "reservas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.7ms)
+
+
