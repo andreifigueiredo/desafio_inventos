@@ -15,3 +15,72 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ body {
+     background-color:  white;
+     color: #708090;
+ }
+ th {
+    background-color: #708090;
+    color: white;
+    font-weight: bold;
+ }
+ td {
+    color: #708090; 
+ }
+ th, td {    
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #708090;    
+}
+td a{
+    display: block;
+    color: #708090;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; 
+}
+ tr:nth-child(even) {
+    background-color: #C0C0C0;
+    color: #708090;    
+}
+ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C0C0C0;
+}
+
+li {
+    float: left;
+    border-right:1px solid #708090;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: #708090;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a {
+    color: #708090;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited {
+    font-weight: bold;
+    color: #708090;
+}
+strong{
+    color: #708090;
+}
+footer{
+    background-color: #708090;
+}

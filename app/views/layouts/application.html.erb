@@ -7,25 +7,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     
-    <%= link_to "Home", root_path %>
-    <% if user_signed_in? %>
-      <%= link_to "Histórico de Reservas", reservas_path %>
-      <%if reserva_ativa.confirmation%>  
-        <%= link_to "Nova Reserva", new_reserva_path %>
-      <%else%>
-        <%= link_to "Minha Reserva", @reserva%>      
-      <%end%>
-      <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Histórico de Reservas", reservas_path %></li>
+        <%if reserva_ativa.confirmation%>  
+          <li><%= link_to "Nova Reserva", new_reserva_path %></li>
+        <%else%>
+          <li><%= link_to "Minha Reserva", @reserva%></li>
+        <%end%>
+        <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+    </ul>
     <%= yield %>
+  </head>
+  <body>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
   </body>
 </html>

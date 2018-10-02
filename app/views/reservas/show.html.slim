@@ -28,6 +28,7 @@ table
 
 -if !reserva_ativa.confirmation
   => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
+  '|
   => link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete
-'|
+  '|
 =< link_to 'Voltar', reservas_path
