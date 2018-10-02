@@ -6,7 +6,7 @@ p
 
 p
   strong Preço Total:
-  = @reserva.preco_total
+  = "R$#{@reserva.preco_total}0"
 p 
   strong Miniaturas Reservadas
 table
@@ -21,7 +21,7 @@ table
       tr
         td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
         td = miniatura.nome
-        td = miniatura.preco
+        td = "R$#{miniatura.preco}0"
         td = link_to 'Detalhes', miniatura
 
 -if !reserva_ativa.confirmation

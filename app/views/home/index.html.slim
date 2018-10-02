@@ -13,6 +13,6 @@ table
       tr
         td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
         td = miniatura.nome
-        td = miniatura.preco
+        td = "R$#{miniatura.preco}0"
         td = link_to 'Detalhes', miniatura
         td = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura)
