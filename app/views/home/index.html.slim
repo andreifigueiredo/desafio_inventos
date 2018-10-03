@@ -1,8 +1,8 @@
 div class="container"
-  h1 Miniaturas Disponíveis
--@miniaturas.each do |miniatura| 
-  div class="container" 
-    div class="row"
+  div class="row"
+    h1 Miniaturas Disponíveis
+  -@miniaturas.each do |miniatura| 
+    div class="container" 
       div class="col-md-4"
         div class="card mb-4 sharow-sm"
           = link_to(image_tag("#{miniatura.nome}.jpg"), miniatura)
