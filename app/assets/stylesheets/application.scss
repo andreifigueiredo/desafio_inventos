@@ -69,19 +69,16 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-a {
+a, a:visited{
     color: #708090;
     padding: 14px 16px;
     text-decoration: none;
     font-weight: bold;
 }
-a:visited {
-    font-weight: bold;
-    color: #708090;
-}
-a:hover {
-    font-weight: bold;
-    color: #C0C0C0;
+a:active, a:hover {
+    background-color: #708090;
+    text-decoration: none;
+    color: white;
 }
 strong{
     color: #708090;
