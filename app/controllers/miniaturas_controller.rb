@@ -10,7 +10,7 @@ class MiniaturasController < ApplicationController
   # GET /miniaturas/1
   # GET /miniaturas/1.json
   def show
-    @reserva = Reserva.last
+    @reserva = current_user.reservas.last
   end
 
   # GET /miniaturas/new

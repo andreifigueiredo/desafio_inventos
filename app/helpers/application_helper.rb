@@ -1,5 +1,5 @@
 module ApplicationHelper
     def reserva_ativa
-        @reserva = Reserva.last
+        @reserva = current_user.reservas.last
     end
 end
