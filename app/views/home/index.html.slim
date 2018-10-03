@@ -1,18 +1,14 @@
-h1 Miniaturas Disponíveis
-
-table
-  thead
-    tr
-      th Foto
-      th Nome
-      th Preco
-      th
-      th
-  tbody
-    - @miniaturas.each do |miniatura|
-      tr
-        td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
-        td = miniatura.nome
-        td = "R$#{miniatura.preco}0"
-        td = link_to 'Detalhes', miniatura
-        td = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura)
+div class="container"
+  h1 Miniaturas Disponíveis
+-@miniaturas.each do |miniatura| 
+  div class="container" 
+    div class="row"
+      div class="col-md-4"
+        div class="card mb-4 sharow-sm"
+          = link_to(image_tag("#{miniatura.nome}.jpg"), miniatura)
+          p 
+            Nome = miniatura.nome
+            br
+            Preço = "R$#{miniatura.preco}0"
+          div class="d-flex justify-content-between align-itens-center"
+            = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura)

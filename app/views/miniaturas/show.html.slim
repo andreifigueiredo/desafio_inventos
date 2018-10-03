@@ -1,22 +1,24 @@
-p#notice = notice
+div class="container" 
+    div class="row"
+      p#notice = notice
 
-p 
-  strong Foto:
-  = image_tag("#{@miniatura.nome}.jpg")
-p
-  strong Nome:
-  = @miniatura.nome
-p
-  strong Tamanho:
-  = "#{@miniatura.tamanho}cm"
-p
-  strong Preco:
-  = "R$#{@miniatura.preco}0"
-p
-  strong Descricao:
-  = @miniatura.descricao
-<!-- O usuário nao deve ser capaz de editar as miniaturas
-=> link_to 'Edit', edit_miniatura_path(@miniatura)
-'|-->
-=> link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => @miniatura)
-=< link_to 'Voltar', root_path
+      p 
+        strong Foto:
+        = image_tag("#{@miniatura.nome}.jpg")
+      p
+        strong Nome:
+        = @miniatura.nome
+      p
+        strong Tamanho:
+        = "#{@miniatura.tamanho}cm"
+      p
+        strong Preco:
+        = "R$#{@miniatura.preco}0"
+      p
+        strong Descricao:
+        = @miniatura.descricao
+      <!-- O usuário nao deve ser capaz de editar as miniaturas
+      => link_to 'Edit', edit_miniatura_path(@miniatura)
+      '|-->
+      => link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => @miniatura)
+      =< link_to 'Voltar', root_path

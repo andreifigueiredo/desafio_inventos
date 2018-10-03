@@ -1,34 +1,36 @@
-p#notice = notice
+div class="container"
+  p#notice = notice
 
-p
-  strong Data da reserva:
-  = @reserva.data_da_reserva
+  p
+    strong Data da reserva:
+    = @reserva.data_da_reserva
 
-p
-  strong Preço Total:
-  = "R$#{@reserva.preco_total}0"
-p 
-  strong Miniaturas Reservadas
-table
-  thead
-    tr
-      th Foto
-      th Nome
-      th Preco
-      th Quantidade
-      th
-  tbody
-    - @reserva.miniaturas.each do |miniatura|
-      tr
-        td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
-        td = miniatura.nome
-        td = "R$#{miniatura.preco}0"
-        td = miniatura.getQuantidade(@reserva)
-        td = link_to 'Detalhes', miniatura
+  p
+    strong Preço Total:
+    = "R$#{@reserva.preco_total}0"
+  p 
+    strong Miniaturas Reservadas
+  div class="table-responsive" 
+    table class="table"
+      thead
+        tr
+          th Foto
+          th Nome
+          th Preco
+          th Quantidade
+          th
+      tbody
+        - @reserva.miniaturas.each do |miniatura|
+          tr
+            td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
+            td = miniatura.nome
+            td = "R$#{miniatura.preco}0"
+            td = miniatura.getQuantidade(@reserva)
+            td = link_to 'Detalhes', miniatura
 
--if !reserva_ativa.confirmation
-  => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
-  '|
-  => link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete
-  '|
-=< link_to 'Voltar', reservas_path
+    -if !reserva_ativa.confirmation
+      => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
+      '|
+      => link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete
+      '|
+    =< link_to 'Voltar', reservas_path

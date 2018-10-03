@@ -1,17 +1,16 @@
-h1 Histórico de reservas
-
-table
-  thead
-    tr
-      th Data da reserva
-      th Preço Total
-      th
-      th
-      th
-
-  tbody
-    - current_user.reservas.each do |reserva|
-      tr
-        td = reserva.data_da_reserva
-        td = "R$#{reserva.preco_total}0"
-        td = link_to 'Detalhes', reserva
+div class="container" 
+    div class="row"
+      h1 Histórico de reservas
+      div class="table-responsive"
+        table class="table"
+          thead
+            tr
+              th Data da reserva
+              th Preço Total
+              th
+          tbody
+            - current_user.reservas.each do |reserva|
+              tr
+                td = reserva.data_da_reserva
+                td = "R$#{reserva.preco_total}0"
+                td = link_to 'Detalhes', reserva
