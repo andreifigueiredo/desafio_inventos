@@ -29,8 +29,9 @@ div class="container"
             td = "R$#{miniatura.preco}0"
             td = miniatura.getQuantidade(@reserva)
             td = link_to 'Detalhes', miniatura
-
-  -if !reserva_ativa.confirmation
-    => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
-    => link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete
-  =< link_to 'Voltar', reservas_path
+  div class="d-flex justify-content-between align-itens-center"
+    div class="btn-group"
+      -if !@reserva.confirmation
+        = link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id, class: "btn btn-sm btn-outline-secondary" }
+        = link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-sm btn-outline-secondary"
+      = link_to 'Voltar', reservas_path, class: "btn btn-sm btn-outline-secondary"
