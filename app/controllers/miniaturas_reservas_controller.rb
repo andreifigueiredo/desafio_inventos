@@ -15,10 +15,13 @@ class MiniaturasReservasController < ApplicationController
 
   # GET /miniaturas_reservas/new
   def new
-    @miniatura = params[:miniatura]
-    @miniatura_nome = Miniatura.find(params[:miniatura]).nome 
-
-    @miniaturas_reserva = MiniaturasReserva.new
+    if params[:active] == 'true'
+      redirect_to new_reserva_path, notice: 'Crie uma nova Reserva'
+    else
+      @miniatura = params[:miniatura]
+      @miniatura_nome = Miniatura.find(params[:miniatura]).nome 
+      @miniaturas_reserva = MiniaturasReserva.new
+    end
   end
 
   # GET /miniaturas_reservas/1/edit

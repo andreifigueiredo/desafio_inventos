@@ -4,11 +4,11 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-signin") do |f| %>
     <div class="field">
     <%= f.label :email, class: "sr-only" %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "from-control", placeholder: "Insira seu Email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "from-control", placeholder: "Insira seu Email", required: true %>
     </div>
     <div class="field">
     <%= f.label :password , class: "sr-only" %>
-    <%= f.password_field :password, autocomplete: "current-password", class: "from-control", placeholder: "Insira sua Senha" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "from-control", placeholder: "Insira sua Senha", required: true %>
     </div>
     <div class="field">
     <% if devise_mapping.rememberable? -%>

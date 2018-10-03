@@ -25,6 +25,7 @@ Rails.application.configure do
   :enable_starttls_auto => true
   }
 
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).

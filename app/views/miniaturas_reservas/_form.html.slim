@@ -1,4 +1,5 @@
-= image_tag "#{@miniatura_nome}.jpg"
+figure class="figure"
+  = image_tag "#{@miniatura_nome}.jpg", class: "figure-img img-fluid rounded"
 h2 = "Miniatura Selecionada: #{@miniatura_nome}"
 br
 = form_for @miniaturas_reserva do |f|
@@ -10,9 +11,9 @@ br
           li = message
 
   .field
-    = f.hidden_field :miniatura_id, value: @miniatura
+    = f.hidden_field :miniatura_id, value: @miniatura, required: true
     -if reserva_ativa.confirmation == false
-      = f.hidden_field :reserva_id, value: @reserva.id
+      = f.hidden_field :reserva_id, value: @reserva.id, required: true
     = f.label :quantidade
-    = f.number_field :quantidade
+    = f.number_field :quantidade, required: true
   .actions = f.submit "Reservar Miniatura"

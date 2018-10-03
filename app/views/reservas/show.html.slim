@@ -9,7 +9,7 @@ div class="container"
     strong Preço Total:
     = "R$#{@reserva.preco_total}0"
   p 
-    strong Miniaturas Reservadas
+    h1 Miniaturas Reservadas
   div class="table-responsive" 
     table class="table"
       thead
@@ -22,7 +22,9 @@ div class="container"
       tbody
         - @reserva.miniaturas.each do |miniatura|
           tr
-            td = (image_tag("#{miniatura.nome}.jpg", style: 'height:30%;width:30%;'))
+            td  
+              figure class="figure"
+                = (image_tag("#{miniatura.nome}.jpg", class: "figure-img img-fluid rounded"))
             td = miniatura.nome
             td = "R$#{miniatura.preco}0"
             td = miniatura.getQuantidade(@reserva)

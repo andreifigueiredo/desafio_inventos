@@ -4,10 +4,11 @@ div class="container"
     -@miniaturas.each do |miniatura|
       div class="col-md-4"
         div class="card mb-4 sharow-sm"
-          = link_to(image_tag("#{miniatura.nome}.jpg"), miniatura)
+          figure class="figure"
+            = link_to(image_tag("#{miniatura.nome}.jpg", class: "figure-img img-fluid rounded"), miniatura)
           p 
             Nome = miniatura.nome
             br
             Preço = "R$#{miniatura.preco}0"
           div class="d-flex justify-content-between align-itens-center"
-            = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura)
+            = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation)

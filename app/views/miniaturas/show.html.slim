@@ -4,7 +4,8 @@ div class="container"
 
       p 
         strong Foto:
-        = image_tag("#{@miniatura.nome}.jpg")
+        figure class="figure"
+          = image_tag("#{@miniatura.nome}.jpg", class: "figure-img img-fluid rounded")
       p
         strong Nome:
         = @miniatura.nome
@@ -20,5 +21,5 @@ div class="container"
       <!-- O usuário nao deve ser capaz de editar as miniaturas
       => link_to 'Edit', edit_miniatura_path(@miniatura)
       '|-->
-      => link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => @miniatura)
+      => link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => @miniatura, :active => @reserva.confirmation)
       =< link_to 'Voltar', root_path
