@@ -6,9 +6,11 @@ div class="container"
         div class="card mb-4 sharow-sm"
           figure class="figure"
             = link_to(image_tag("#{miniatura.nome}.jpg", class: "figure-img img-fluid rounded"), miniatura)
-          p 
-            Nome = miniatura.nome
-            br
-            Preço = "R$#{miniatura.preco}0"
-          div class="d-flex justify-content-between align-itens-center"
-            = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation)
+          div class="card-body"
+            p class="card-text" 
+              Nome = miniatura.nome
+              br
+              Preço = "R$#{miniatura.preco}0"
+            div class="d-flex justify-content-between align-itens-center"
+              div class="btn-group"
+                = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation)
