@@ -1,11 +1,11 @@
 div class="container"
   div class="row"
-    h1 Miniaturas Disponíveis
+    h1 Minions Disponíveis
     -@miniaturas.each do |miniatura|
       div class="col-md-4"
         div class="card mb-4 sharow-sm"
           figure class="figure"
-            = link_to(image_tag("#{miniatura.nome}.jpg", class: "figure-img img-fluid rounded"), miniatura)
+            = image_tag("#{miniatura.nome}.jpg", class: "figure-img img-fluid rounded")
           div class="card-body"
             p class="card-text" 
               Nome = miniatura.nome
@@ -13,6 +13,7 @@ div class="container"
               Preço = number_to_currency_br(miniatura.preco)
             div class="d-flex justify-content-between align-itens-center"
               div class="btn-group"
+                = link_to 'Detalhes', miniatura, class: "btn btn-sm btn-outline-secondary"
                 - if @reserva == nil
                   = link_to 'Reservar Miniatura', new_reserva_path, class: "btn btn-sm btn-outline-secondary" 
                 - else
