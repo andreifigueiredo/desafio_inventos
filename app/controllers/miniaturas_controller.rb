@@ -10,11 +10,6 @@ class MiniaturasController < ApplicationController
   # GET /miniaturas/1
   # GET /miniaturas/1.json
   def show
-    if current_user != nil
-      @reserva = current_user.reservas.last
-    else
-      @reserva = Reserva.last
-    end
   end
 
   # GET /miniaturas/new

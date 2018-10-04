@@ -13,4 +13,7 @@ div class="container"
               Preço = "R$#{miniatura.preco}0"
             div class="d-flex justify-content-between align-itens-center"
               div class="btn-group"
-                = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation)
+                - if @reserva == nil
+                  = link_to 'Reservar Miniatura', new_reserva_path, class: "btn btn-sm btn-outline-secondary" 
+                - else
+                  = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation, class: "btn btn-sm btn-outline-secondary")

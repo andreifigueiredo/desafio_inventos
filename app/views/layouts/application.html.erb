@@ -17,7 +17,7 @@
             <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link active" %></li>
             <% if user_signed_in? %>
               <li class="nav-item"><%= link_to "Histórico de Reservas", reservas_path, class: "nav-link " %></li>
-              <%if reserva_ativa.confirmation%>  
+              <%if @reserva == nil || @reserva.confirmation %>  
                 <li class="nav-item"><%= link_to "Nova Reserva", new_reserva_path, class: "nav-link " %></li>
               <%else%>
                 <li class="nav-item"><%= link_to "Minha Reserva", @reserva, class: "nav-link "%></li>

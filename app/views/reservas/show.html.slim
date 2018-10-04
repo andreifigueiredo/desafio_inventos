@@ -30,7 +30,7 @@ div class="container"
             td = miniatura.getQuantidade(@reserva)
             td = link_to 'Detalhes', miniatura
 
-  -if !reserva_ativa.confirmation
+  -if !@reserva.confirmation
     => link_to 'Confirmar', { controller: :reservas, action: :confirmar_reserva, id: @reserva.id }
     => link_to 'Cancelar Reserva', @reserva, data: { confirm: 'Are you sure?' }, method: :delete
   =< link_to 'Voltar', reservas_path
