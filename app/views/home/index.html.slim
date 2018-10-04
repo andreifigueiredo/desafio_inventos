@@ -16,4 +16,4 @@ div class="container"
                 - if @reserva == nil
                   = link_to 'Reservar Miniatura', new_reserva_path, class: "btn btn-sm btn-outline-secondary" 
                 - else
-                  = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation, class: "btn btn-sm btn-outline-secondary")
+                  = link_to 'Reservar Miniatura', new_miniaturas_reserva_path(:miniatura => miniatura, :active => @reserva.confirmation), class: "btn btn-sm btn-outline-secondary"
