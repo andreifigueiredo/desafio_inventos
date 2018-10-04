@@ -12,7 +12,7 @@ div class="container"
             - current_user.reservas.each do |reserva|
               tr
                 td = reserva.data_da_reserva
-                td = "R$#{reserva.preco_total}0"
+                td = number_to_currency_br(reserva.preco_total)
                 td = link_to 'Detalhes', reserva
       div class="d-flex justify-content-between align-itens-center"
         div class="btn-group"

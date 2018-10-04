@@ -14,7 +14,7 @@ div class="container"
         = "#{@miniatura.tamanho}cm"
       p
         strong Preco:
-        = "R$#{@miniatura.preco}0"
+        = number_to_currency_br(@miniatura.preco)
       p
         strong Descricao:
         = @miniatura.descricao

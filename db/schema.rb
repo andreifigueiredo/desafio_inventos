@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_224009) do
+ActiveRecord::Schema.define(version: 2018_10_04_133908) do
 
   create_table "miniaturas", force: :cascade do |t|
     t.string "nome"
     t.decimal "tamanho"
-    t.decimal "preco"
+    t.float "preco"
     t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_224009) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.decimal "preco_total"
+    t.float "preco_total", default: 0.0
     t.boolean "confirmation", default: false
   end
 

@@ -10,7 +10,7 @@ div class="container"
             p class="card-text" 
               Nome = miniatura.nome
               br
-              Preço = "R$#{miniatura.preco}0"
+              Preço = number_to_currency_br(miniatura.preco)
             div class="d-flex justify-content-between align-itens-center"
               div class="btn-group"
                 - if @reserva == nil

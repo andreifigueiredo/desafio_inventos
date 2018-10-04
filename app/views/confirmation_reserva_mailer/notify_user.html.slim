@@ -5,7 +5,7 @@ h4 Qualquer duvida favor entrar em contato com: andreipaesfigueiredo@gmail.com
 
 p
   strong Preço Total:
-  = "R$#{@reserva.preco_total}0"
+  = number_to_currency_br(@reserva.preco_total)
 p 
   strong Miniaturas Reservadas
 table
@@ -18,5 +18,5 @@ table
     - @reserva.miniaturas.each do |miniatura|
       tr
         td = miniatura.nome
-        td = "R$#{miniatura.preco}0"
+        td = number_to_currency_br(miniatura.preco)
         td = miniatura.getQuantidade(@reserva)

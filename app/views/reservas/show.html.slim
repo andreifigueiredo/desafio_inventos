@@ -7,7 +7,7 @@ div class="container"
 
   p
     strong Preço Total:
-    = "R$#{@reserva.preco_total}0"
+    = number_to_currency_br(@reserva.preco_total)
   p 
     h1 Miniaturas Reservadas
   div class="table-responsive" 
@@ -26,7 +26,7 @@ div class="container"
               figure class="figure"
                 = (image_tag("#{miniatura.nome}.jpg", class: "figure-img img-fluid rounded"))
             td = miniatura.nome
-            td = "R$#{miniatura.preco}0"
+            td = number_to_currency_br(miniatura.preco)
             td = miniatura.getQuantidade(@reserva)
             td = link_to 'Detalhes', miniatura
   div class="d-flex justify-content-between align-itens-center"
