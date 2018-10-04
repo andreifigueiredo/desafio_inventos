@@ -12,7 +12,7 @@ br
 
   .field
     = f.hidden_field :miniatura_id, value: @miniatura, required: true
-    -if reserva_ativa.confirmation == false
+    -if @reserva.confirmation == false
       = f.hidden_field :reserva_id, value: @reserva.id, required: true
     = f.label :quantidade
     = f.number_field :quantidade, required: true
